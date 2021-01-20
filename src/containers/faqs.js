@@ -1,11 +1,12 @@
 import React from 'react'
-import {Accordion} from '../components'
+import {Accordion, OptForm} from '../components'
 import faqsData from '../fixtures/faqs.json'
 
 export default function FaqsContainer() {
     return (
         <Accordion>
             <Accordion.Title>Frequently Asked Question</Accordion.Title>
+           
             {faqsData.map((item) => (
                 <Accordion.Item key={item.id}>
                     <Accordion.Header>
@@ -16,6 +17,11 @@ export default function FaqsContainer() {
                     </Accordion.Body>
                 </Accordion.Item>
             ))}
+            <OptForm>
+                <OptForm.Input placeholder="Email Address" />
+                <OptForm.Button>Try it now</OptForm.Button>
+                <OptForm.Text>ready to watch Enter your email to create or re</OptForm.Text>
+            </OptForm>
         </Accordion>
     )
 }

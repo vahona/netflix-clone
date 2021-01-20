@@ -7,15 +7,15 @@ export const Container = styled.section`
 
 `
 
-export const Inner = styled.section`
+export const Inner = styled.div`
   display: flex;
   padding: 70px 45px;
   flex-direction: column;
-  max-widthL 815px;
+  max-width: 815px;
   margin: auto
 `;
 
-export const Item = styled.section`
+export const Item = styled.div`
  color: white;
  margin-bottom: 10px;
 
@@ -24,7 +24,7 @@ export const Item = styled.section`
    }
 `;
 
-export const Title = styled.section`
+export const Title = styled.h1`
 
   font-size: 50px;
   line-height: 1.1;
@@ -38,29 +38,46 @@ export const Title = styled.section`
   }
 `;
 
+// export const Fram = styled.section`
 
-export const Header = styled.section`
+// `
+export const Header = styled.div`
   display: flex;
+  box-sizing: border-box;
   justify-content: space-between;
   cursor: pointer;
-  margin-botto: 1px;
+  margin-bottom: 1px;
   font-size: 26px;
   font-weight: normal;
   background: #303030;
   padding: 0.8em 1.2em 0.8em 1.2em;
-  use-select:none;
-  align-items: center
+  user-select: none;
+  width: 100%;
+  align-items: center;
+  @media (max-width: 600px) {
+    font-size: 16px;
+  }
+
+  img {
+    filter: brightness(0) invert(1);
+    width: 24px;
+
+    @media (max-width: 600px) {
+      width: 16px;
+    }
+  }
 `;
-export const Body = styled.section`
-  max-width: 1200px;
+export const Body = styled.div`
+ box-sizing: border-box;
+  transition: max-height 0.25s cubic-vezier(0.5, 0, 0.1, 1);
   font-size: 26px;
   line-height: normal;
   padding: 0.8em 1.2em 0.8em 1.2em;
-  use-select: none;
+  user-select: none;
   align-items: center;
   background: #303030;
   font-weight: normal;
-
+  width: 100%;
   @media(max-width: 600px) {
       font-size: 16px;
       line-height: 22px

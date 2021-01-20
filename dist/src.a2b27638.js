@@ -35681,7 +35681,7 @@ function _templateObject5() {
 }
 
 function _templateObject4() {
-  var data = _taggedTemplateLiteral(["\n  width: 50%\n\n  @media (max-width: 1000px) {\n      width: 100%;\n      padding: 0 45px;\n      text-align: center\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 50%;\n\n  @media (max-width: 1000px) {\n      width: 100%;\n      padding: 0 45px;\n      text-align: center\n  }\n"]);
 
   _templateObject4 = function _templateObject4() {
     return data;
@@ -35711,7 +35711,7 @@ function _templateObject2() {
 }
 
 function _templateObject() {
-  var data = _taggedTemplateLiteral(["\n display: flex;\n align-items: center;\n justify-content: space-between;\n flex-direction: ", ";\n\n max-width: 1100px;\n margin: auto;\n width: 100%\n\n @media (max-width: 1000px) {\n     flex-direction: column\n }\n\n"]);
+  var data = _taggedTemplateLiteral(["\n display: flex;\n align-items: center;\n justify-content: space-between;\n flex-direction: ", ";\n\n max-width: 1100px;\n margin: auto;\n width: 100%;\n\n @media (max-width: 1000px) {\n     flex-direction: column\n }\n\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -36007,7 +36007,7 @@ var _styledComponents = _interopRequireDefault(require("styled-components"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _templateObject6() {
-  var data = _taggedTemplateLiteral(["\n  max-width: 1200px;\n  font-size: 26px;\n  line-height: normal;\n  padding: 0.8em 1.2em 0.8em 1.2em;\n  use-select: none;\n  align-items: center;\n  background: #303030;\n  font-weight: normal;\n\n  @media(max-width: 600px) {\n      font-size: 16px;\n      line-height: 22px\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n box-sizing: border-box;\n  transition: max-height 0.25s cubic-vezier(0.5, 0, 0.1, 1);\n  font-size: 26px;\n  line-height: normal;\n  padding: 0.8em 1.2em 0.8em 1.2em;\n  user-select: none;\n  align-items: center;\n  background: #303030;\n  font-weight: normal;\n  width: 100%;\n  @media(max-width: 600px) {\n      font-size: 16px;\n      line-height: 22px\n  }\n"]);
 
   _templateObject6 = function _templateObject6() {
     return data;
@@ -36017,7 +36017,7 @@ function _templateObject6() {
 }
 
 function _templateObject5() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  justify-content: space-between;\n  cursor: pointer;\n  margin-botto: 1px;\n  font-size: 26px;\n  font-weight: normal;\n  background: #303030;\n  padding: 0.8em 1.2em 0.8em 1.2em;\n  use-select:none;\n  align-items: center\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  box-sizing: border-box;\n  justify-content: space-between;\n  cursor: pointer;\n  margin-bottom: 1px;\n  font-size: 26px;\n  font-weight: normal;\n  background: #303030;\n  padding: 0.8em 1.2em 0.8em 1.2em;\n  user-select: none;\n  width: 100%;\n  align-items: center;\n  @media (max-width: 600px) {\n    font-size: 16px;\n  }\n\n  img {\n    filter: brightness(0) invert(1);\n    width: 24px;\n\n    @media (max-width: 600px) {\n      width: 16px;\n    }\n  }\n"]);
 
   _templateObject5 = function _templateObject5() {
     return data;
@@ -36047,7 +36047,7 @@ function _templateObject3() {
 }
 
 function _templateObject2() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  padding: 70px 45px;\n  flex-direction: column;\n  max-widthL 815px;\n  margin: auto\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  padding: 70px 45px;\n  flex-direction: column;\n  max-width: 815px;\n  margin: auto\n"]);
 
   _templateObject2 = function _templateObject2() {
     return data;
@@ -36072,23 +36072,25 @@ var Container = _styledComponents.default.section(_templateObject());
 
 exports.Container = Container;
 
-var Inner = _styledComponents.default.section(_templateObject2());
+var Inner = _styledComponents.default.div(_templateObject2());
 
 exports.Inner = Inner;
 
-var Item = _styledComponents.default.section(_templateObject3());
+var Item = _styledComponents.default.div(_templateObject3());
 
 exports.Item = Item;
 
-var Title = _styledComponents.default.section(_templateObject4());
+var Title = _styledComponents.default.h1(_templateObject4()); // export const Fram = styled.section`
+// `
+
 
 exports.Title = Title;
 
-var Header = _styledComponents.default.section(_templateObject5());
+var Header = _styledComponents.default.div(_templateObject5());
 
 exports.Header = Header;
 
-var Body = _styledComponents.default.section(_templateObject6());
+var Body = _styledComponents.default.div(_templateObject6());
 
 exports.Body = Body;
 },{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/components/accordion/index.js":[function(require,module,exports) {
@@ -36107,22 +36109,51 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return; var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 
 function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+var ToggleContext = (0, _react.createContext)();
 
 function Accordion(_ref) {
   var children = _ref.children,
       restProps = _objectWithoutProperties(_ref, ["children"]);
 
   return /*#__PURE__*/_react.default.createElement(_accordion.Container, restProps, /*#__PURE__*/_react.default.createElement(_accordion.Inner, null, children));
-}
+} // Accordion.Fram = function AccordionFram({ children, ...restProps }) {
+//   return <Fram {...restProps}>{children}</Fram>;
+// };
+
 
 Accordion.Item = function AccordionItem(_ref2) {
   var children = _ref2.children,
       restProps = _objectWithoutProperties(_ref2, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_accordion.Item, restProps, children);
+  var _useState = (0, _react.useState)(false),
+      _useState2 = _slicedToArray(_useState, 2),
+      toggleShow = _useState2[0],
+      setToggleShow = _useState2[1];
+
+  return /*#__PURE__*/_react.default.createElement(ToggleContext.Provider, {
+    value: {
+      toggleShow: toggleShow,
+      setToggleShow: setToggleShow
+    }
+  }, /*#__PURE__*/_react.default.createElement(_accordion.Item, restProps, children));
 };
 
 Accordion.Title = function AccordionTitle(_ref3) {
@@ -36136,16 +36167,151 @@ Accordion.Header = function AccordionHeader(_ref4) {
   var children = _ref4.children,
       restProps = _objectWithoutProperties(_ref4, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_accordion.Header, restProps, children);
+  var _useContext = (0, _react.useContext)(ToggleContext),
+      toggleShow = _useContext.toggleShow,
+      setToggleShow = _useContext.setToggleShow;
+
+  return /*#__PURE__*/_react.default.createElement(_accordion.Header, _extends({
+    onClick: function onClick() {
+      return setToggleShow(!toggleShow);
+    }
+  }, restProps), children, toggleShow ? /*#__PURE__*/_react.default.createElement("img", {
+    src: "/images/icons/close-slim.png",
+    alt: "close"
+  }) : /*#__PURE__*/_react.default.createElement("img", {
+    src: "/images/icons/add.png",
+    alt: "open"
+  }));
 };
 
 Accordion.Body = function AccordionBody(_ref5) {
   var children = _ref5.children,
       restProps = _objectWithoutProperties(_ref5, ["children"]);
 
-  return /*#__PURE__*/_react.default.createElement(_accordion.Body, restProps, children);
+  var _useContext2 = (0, _react.useContext)(ToggleContext),
+      toggleShow = _useContext2.toggleShow;
+
+  return toggleShow ? /*#__PURE__*/_react.default.createElement(_accordion.Body, restProps, children) : null;
 };
-},{"react":"node_modules/react/index.js","./styles/accordion":"src/components/accordion/styles/accordion.js"}],"src/components/index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./styles/accordion":"src/components/accordion/styles/accordion.js"}],"src/components/opt-form/styles/opt-form.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Text = exports.Button = exports.Input = exports.Container = void 0;
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _templateObject4() {
+  var data = _taggedTemplateLiteral(["\n   font-size: 19px;\n   color: white;\n   text-align: center;\n\n   @media (max-width: 1000px) {\n       font-size: 16px;\n       line-height: 22;\n   }\n"]);
+
+  _templateObject4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  align-items: center;\n  height: 70px;\n  background: #e50914;\n  color: white;\n  text-transform: uppercase;\n  padding: 0 32px;\n  font-size: 26px;\n  border: 0;\n  cursor: pointer;\n\n  img {\n    margin-left: 10px;\n    filter: brightness(0) invert(1);\n    width: 16px;\n\n    @media (max-width: 1000px) {\n      width: 16px;\n    }\n  }\n\n  &:hover {\n      background: #f40612;\n  }\n\n  @media (max-width: 1000px) {\n      height: 50px;\n      font-size: 16px;\n      margin-top: 20px;\n      font-weight: bold\n  }\n"]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = _taggedTemplateLiteral(["\nmax-width: 450px;\nwidth: 100%;\nborder: 0;\npadding: 10px;\nheight: 70px;\nbox-sizing: border-box;\n\n\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = _taggedTemplateLiteral(["\n display: flex;\n justify-content: center;\n height: 100%;\n margin-top: 20px;\n flex-wrap:wrap;\n\n @media(max-width: 1000px) {\n     flex-direction: column;\n     align-items: center\n }\n\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(0); } return Object.freeze(Object.defineProperties(strings, { raw: { value: Object.freeze(raw) } })); }
+
+var Container = _styledComponents.default.div(_templateObject());
+
+exports.Container = Container;
+
+var Input = _styledComponents.default.input(_templateObject2());
+
+exports.Input = Input;
+
+var Button = _styledComponents.default.button(_templateObject3());
+
+exports.Button = Button;
+
+var Text = _styledComponents.default.p(_templateObject4());
+
+exports.Text = Text;
+},{"styled-components":"node_modules/styled-components/dist/styled-components.browser.esm.js"}],"src/components/opt-form/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = OptForm;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _optForm = require("./styles/opt-form");
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i < sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) >= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i < sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) >= 0) continue; target[key] = source[key]; } return target; }
+
+function OptForm(_ref) {
+  var children = _ref.children,
+      restProps = _ref.restProps;
+  return /*#__PURE__*/_react.default.createElement(_optForm.Container, restProps, children);
+}
+
+OptForm.Input = function OptFormInput(_ref2) {
+  var children = _ref2.children,
+      restProps = _objectWithoutProperties(_ref2, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_optForm.Input, restProps, children);
+};
+
+OptForm.Button = function OptFormButton(_ref3) {
+  var children = _ref3.children,
+      restProps = _objectWithoutProperties(_ref3, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_optForm.Button, restProps, children, /*#__PURE__*/_react.default.createElement("img", {
+    src: "/images/icons/chevron-right.png",
+    alt: "try now"
+  }));
+};
+
+OptForm.Text = function OptFormText(_ref4) {
+  var children = _ref4.children,
+      restProps = _objectWithoutProperties(_ref4, ["children"]);
+
+  return /*#__PURE__*/_react.default.createElement(_optForm.Text, restProps, children);
+};
+},{"react":"node_modules/react/index.js","./styles/opt-form":"src/components/opt-form/styles/opt-form.js"}],"src/components/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36169,6 +36335,12 @@ Object.defineProperty(exports, "Accordion", {
     return _accordion.default;
   }
 });
+Object.defineProperty(exports, "OptForm", {
+  enumerable: true,
+  get: function () {
+    return _optForm.default;
+  }
+});
 
 var _jumbotron = _interopRequireDefault(require("./jumbotron"));
 
@@ -36176,8 +36348,10 @@ var _footer = _interopRequireDefault(require("./footer"));
 
 var _accordion = _interopRequireDefault(require("./accordion"));
 
+var _optForm = _interopRequireDefault(require("./opt-form"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./jumbotron":"src/components/jumbotron/index.js","./footer":"src/components/footer/index.js","./accordion":"src/components/accordion/index.js"}],"src/containers/jumbotron.js":[function(require,module,exports) {
+},{"./jumbotron":"src/components/jumbotron/index.js","./footer":"src/components/footer/index.js","./accordion":"src/components/accordion/index.js","./opt-form":"src/components/opt-form/index.js"}],"src/containers/jumbotron.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36301,7 +36475,9 @@ function FaqsContainer() {
     return /*#__PURE__*/_react.default.createElement(_components.Accordion.Item, {
       key: item.id
     }, /*#__PURE__*/_react.default.createElement(_components.Accordion.Header, null, item.header), /*#__PURE__*/_react.default.createElement(_components.Accordion.Body, null, item.body));
-  }));
+  }), /*#__PURE__*/_react.default.createElement(_components.OptForm, null, /*#__PURE__*/_react.default.createElement(_components.OptForm.Input, {
+    placeholder: "Email Address"
+  }), /*#__PURE__*/_react.default.createElement(_components.OptForm.Button, null, "Try it now"), /*#__PURE__*/_react.default.createElement(_components.OptForm.Text, null, "ready to watch Enter your email to create or re")));
 }
 },{"react":"node_modules/react/index.js","../components":"src/components/index.js","../fixtures/faqs.json":"src/fixtures/faqs.json"}],"src/pages/Home.js":[function(require,module,exports) {
 "use strict";
@@ -36324,7 +36500,22 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function Home() {
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_jumbotron.default, null), /*#__PURE__*/_react.default.createElement(_faqs.default, null), /*#__PURE__*/_react.default.createElement(_footer.default, null));
 }
-},{"react":"node_modules/react/index.js","../containers/jumbotron":"src/containers/jumbotron.js","../containers/footer":"src/containers/footer.js","../containers/faqs":"src/containers/faqs.js"}],"src/app.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","../containers/jumbotron":"src/containers/jumbotron.js","../containers/footer":"src/containers/footer.js","../containers/faqs":"src/containers/faqs.js"}],"src/constants/routes.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.BROWSE = exports.SIGN_UP = exports.SIGN_IN = exports.HOME = void 0;
+var HOME = '/';
+exports.HOME = HOME;
+var SIGN_IN = "/sign-in";
+exports.SIGN_IN = SIGN_IN;
+var SIGN_UP = "/signup";
+exports.SIGN_UP = SIGN_UP;
+var BROWSE = "/browse";
+exports.BROWSE = BROWSE;
+},{}],"src/app.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -36338,20 +36529,26 @@ var _reactRouterDom = require("react-router-dom");
 
 var _Home = _interopRequireDefault(require("./pages/Home"));
 
+var ROUTES = _interopRequireWildcard(require("./constants/routes"));
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function App() {
   return /*#__PURE__*/_react.default.createElement(_reactRouterDom.BrowserRouter, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Switch, null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
-    path: "/signin"
+    path: ROUTES.SIGN_IN
   }, /*#__PURE__*/_react.default.createElement("p", null, "I will be the sign in page")), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
-    path: "/signup"
+    path: ROUTES.SIGN_UP
   }, /*#__PURE__*/_react.default.createElement("p", null, "I will be the sign up page")), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
-    path: "/browse"
+    path: ROUTES.BROWSE
   }, /*#__PURE__*/_react.default.createElement("p", null, "I will be the browse page")), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
-    path: "/"
+    path: ROUTES.HOME
   }, /*#__PURE__*/_react.default.createElement(_Home.default, null))));
 }
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./pages/Home":"src/pages/Home.js"}],"src/global-styles.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./pages/Home":"src/pages/Home.js","./constants/routes":"src/constants/routes.js"}],"src/global-styles.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
