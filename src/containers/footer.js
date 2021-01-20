@@ -35,7 +35,7 @@ export default function FooterContainer() {
           <Footer.Link href="#">Legl notice</Footer.Link>
         </Footer.Column>
         </Footer.Row>
-        <Footer.Text>Nextflix</Footer.Text>
+        <Footer.Text>Nextflix Madagascar</Footer.Text>
       </Footer>
     );
 }
